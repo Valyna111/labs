@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LabaJS8</title>
+    </head>
+    <script type="text/javascript">
+        //1
+        function func1(obj_div)
+{
+obj_div.innerHTML="Ну зачеем?!";
+obj_div.style.color="red";
+}
+        //2
+        function  func2(obj_div)
+{
+obj_div.innerHTML="Ты увеличишься, как и этот текст)))";
+obj_div.style.fontSize="50px";
+}
+        //6
+        function mov(element)
+{
+element.style.border='solid 5px blue'
+}
+function moverф(element)
+{
+    element.style.border='0px'
+}
+    </script>
+    <body>
+        <div onMouseOver="func1(this)" >Тронь меня</div>
+        <div onclick ="func2(this)" >Нажми,и узнаешь, что будет, если не перестанешь кушать по ночам</div>
+        <img id="image" src="1.png" onclick="imgsrc()">
+        <div id="bloc" onclick="fun()">Нажми</div>
+        <span onmouseover="mover(this)" onmouseout="mout(this)"><img src="1.png" width="300px"/></span>
+        <div ondblclick="mov(this)"  onclick="moverф(this)">А я у мамы художница) </div>
+<script type="text/javascript">
+var i=0;
+var image=document.getElementById("image");
+var imgs=new Array('1.png','2.png'); 
+function imgsrc(){
+i++;
+image.src=imgs[i];
+}
+        //4
+        function fun(){
+    var bl = document.getElementById("bloc");
+    bl.innerHTML = "<img src='2.png'>";
+}
+        //5
+        function mover(element)
+{
+element.innerHTML="<img src='1.png' width='60px'/>";
+}
+        function mout(element){
+    element.innerHTML="<img src='1.png' width='30px'/>";
+}
+</script>    
+    </body>
+</html>
